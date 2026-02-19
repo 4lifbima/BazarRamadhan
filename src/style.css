@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  body {
+    @apply m-0 min-h-screen bg-neo-background text-neo-ink font-sans;
+    background-image: radial-gradient(circle at top right, #f4a261 0%, transparent 28%),
+      radial-gradient(circle at left center, #2a9d8f 0%, transparent 20%);
+    background-attachment: fixed;
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+}
+
+@layer utilities {
+  .shadow-neo {
+    box-shadow: 8px 8px 0px 0px #000000;
+  }
+
+  .shadow-neo-sm {
+    box-shadow: 5px 5px 0px 0px #000000;
+  }
+
+  .border-neo {
+    @apply border-[3px] border-black;
+  }
+
+  .neo-surface {
+    @apply border-neo bg-white shadow-neo;
+  }
+}
